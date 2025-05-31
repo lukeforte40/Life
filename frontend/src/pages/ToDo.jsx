@@ -1,14 +1,14 @@
-import Day from "../components/day";
+import { useState } from "react";
 import Nav from "../components/nav";
-import Task from "../components/task";
+import Week from "../components/week";
 
 export default function ToDo(){
+    const [startDate, setStartDate] =useState(Date.now())
+
     return(
         <div>
             <Nav/>
-            <Day date={"01-01-25"}>
-                <Task name={"Test"} notes={"test"}/>
-            </Day>
+            <Week startDate={startDate}/>
         </div>
     )
 }
